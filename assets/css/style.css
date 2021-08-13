@@ -46,6 +46,16 @@ h1, h2, h3, h4, h5, h6 {
     direction: rtl;
 }
 
+::selection {
+  color: white;
+  background: #18d26e;
+}
+
+::-moz-selection {
+  color: white;
+  background: #18d26e;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
