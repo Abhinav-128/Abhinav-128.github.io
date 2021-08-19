@@ -28,6 +28,16 @@ h3{
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  color: #18d26e;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #35e888;
+  text-decoration: none;
+}
+
 #counter, #matches {
   color: #FE4F60;
 }
@@ -98,4 +108,24 @@ h3{
   box-shadow: none;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
+}
+
+.credits {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  text-align: right;
+  font-size: 13px;
+  color: #fff;
+  z-index: 999999;
+}
+
+@media (max-width: 992px) {
+  .credits {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+  }
 }
