@@ -36,7 +36,7 @@ function check(){
       secondCard.classList.remove("flip")
       secondCard.classList.remove("disabled")
       reset()
-    }, 800)
+    }, 750)
   }
 }
 
