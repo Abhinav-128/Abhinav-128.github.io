@@ -15,13 +15,12 @@ function flipCard() {
     firstCard = this
     firstCard.classList.add("flip")
     firstCard.classList.add("disabled")
-    counter()
   } else if(!flippedSecondCard) {
     flippedSecondCard = true
     secondCard = this
     secondCard.classList.add("flip")
     secondCard.classList.add("disabled")
-    counter()
+    turnsCounter()
     check()
   }
 }
@@ -45,6 +44,7 @@ function sameCards(firstCard, secondCard){
   firstCard.classList.add("matched")
   secondCard.classList.add("matched")
   matchesCounter()
+  checkForCompletion()
 }
 
 function reset(){
@@ -52,14 +52,20 @@ function reset(){
   [firstCard, secondCard] = [null, null]
 }
 
-function counter(){
+function turnsCounter(){
   count++
   counterEl.textContent = count
 }
 
 function matchesCounter(){
-  matchedCards ++
+  matchedCards++
   matchesEl.textContent = matchedCards
+}
+
+function checkForCompletion(){
+  if(matchedCards === ((cards.length)/2)){
+    setTimeout(()=>{window.alert(`You won in ${count} turns.`)},500)
+  }
 }
 
 (function shuffle(){
