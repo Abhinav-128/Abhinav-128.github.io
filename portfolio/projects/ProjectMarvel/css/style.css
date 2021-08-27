@@ -1,0 +1,96 @@
+
+body {
+    background-color: #f2f2f2;
+}
+
+/********** Button ***********/
+.loadMore{
+    width: auto;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+}
+
+.buttonDisabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: red;
+    background-color: #d3d3d3;
+}
+
+/********** Card ***********/
+#cardsList {
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 25px 15px;
+    width: 400px;
+    height: 550px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: 0.05s;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #c0c0c0;
+}
+
+.card .cardImg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+.card .cardImg {
+    width: inherit;
+    height: inherit;
+    border-radius: 35px;
+    object-fit: cover;
+    object-position: top;
+    z-index: 2
+}
+
+.card .cardBackgroundImg {
+    width: inherit;
+    height: inherit;
+    border-radius: 35px;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    transform: scale(1.015);
+	z-index: 1;
+    filter: blur(20px);
+}
+
+.card .cardTitle {
+    color: white;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    border-radius: 0px 0px 40px 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    height: 40px;
+}
+
+.card:hover {
+    transform: scale(0.955, 0.955);
+}
+
+@media all and (max-width: 800px) {
+    .card-list {
+      flex-direction: column;
+    }
+}
+
+.hiddenCard {
+    display: none;
+  }
