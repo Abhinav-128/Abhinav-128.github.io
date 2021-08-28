@@ -86,7 +86,3 @@ function viewCardInfo(cardEl){
     cardEl = cardEl.querySelector(".cardInfo")
     cardEl.classList.remove("hidden")
 }
-
-charactersList.forEach((character) => {
-    fetch(`https://gateway.marvel.com/v1/public/characters/${character.charName}`)
-})
