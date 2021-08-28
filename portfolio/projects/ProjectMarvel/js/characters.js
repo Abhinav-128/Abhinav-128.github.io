@@ -88,5 +88,5 @@ function viewCardInfo(cardEl){
 }
 
 charactersList.forEach((character) => {
-    fetch(`https://gateway.marvel.com/v1/public/characters/${character.charName}?apikey=221ecf1d651ec9f3d6baf44d4b9a853a`)
+    fetch(`https://gateway.marvel.com/v1/public/characters/${character.charName}`)
 })
