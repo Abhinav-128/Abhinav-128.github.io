@@ -1,4 +1,5 @@
 const hiddenClass = "hidden"
+const hiddenCardClass = "hiddenCard"
 const maxCards = 3
 const loadCards = 3
 
@@ -11,19 +12,19 @@ cards = Array.from(cards)
 
 const hideCards = () => {cards.forEach((element, index) => {
     if (index > maxCards-1) {
-        element.classList.add(hiddenClass)
+        element.classList.add(hiddenCardClass)
     }
 })}
 hideCards()
 
 const loadMore = () => {
-    var hiddenCards = document.getElementsByClassName(hiddenClass)
+    var hiddenCards = document.getElementsByClassName(hiddenCardClass)
     hiddenCards = Array.from(hiddenCards)
     hiddenCards.forEach((element,index) => {
         if (index < loadCards) {
-            element.classList.remove(hiddenClass)
+            element.classList.remove(hiddenCardClass)
         }
-        if (document.querySelectorAll(`.${hiddenClass}`).length === 0) {
+        if (document.querySelectorAll(`.${hiddenCardClass}`).length === 0) {
             loadBtn.classList.add(hiddenClass)
             collapseBtn.classList.remove(hiddenClass)
         }
