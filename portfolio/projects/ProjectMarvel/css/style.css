@@ -1,23 +1,36 @@
-
 body {
     background-color: #f2f2f2;
 }
 
 /********** Button ***********/
 .loadMore{
-    width: auto;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    background-color: red;
+    box-shadow: 0px 10px 14px -7px #520000;
+	background:linear-gradient(to bottom, #ff0000 5%, #b00000 100%);
+	background-color:#ff0000;
+	border-radius:10px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+    margin: 2px 2px;
+	padding:15px 30px;
+	text-shadow:0px 0px 0px #940000;
+    display: block;
+    border: 0px;
+    margin: auto; 
+}
+
+.loadMore:active {
+    position:relative;
+	top:1.5px;
 }
 
 .buttonDisabled {
     cursor: not-allowed;
     pointer-events: none;
-    color: red;
-    background-color: #d3d3d3;
+    color: white;
+    background-color: #660000;
 }
 
 /********** Card ***********/
@@ -26,12 +39,13 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 
 .card {
     margin: 25px 15px;
-    width: 400px;
+    width: 450px;
     height: 550px;
     border-radius: 35px;
     cursor: pointer;
@@ -85,7 +99,12 @@ body {
     transform: scale(0.955, 0.955);
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 450px) {
+    .card {
+        width: 300px;
+        height: 450px;
+        margin: 15px 15px;
+    }
     .card-list {
       flex-direction: column;
     }
