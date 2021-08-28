@@ -1,10 +1,11 @@
 //Character Class (var char1 = new Character(id, name, img)
 class Character {
-    constructor(id, name, img, description){
+    constructor(id, name, img, description, abilities){
         this.id = id
         this.name = name
         this.img = img
         this.description = description
+        this.abilities = abilities
     }
     getCard(){
         let title = this.name
@@ -20,6 +21,9 @@ class Character {
                          <h3>${title}</h3>
                          <h4>Description:</h4>
                          <p class = "description">${charDescription}</p>
+                         <h4>Powers & Abilities:</h4>
+                         <ul class="description">
+                         </ul>
                      </div>
                      </div>`
         return card
@@ -36,7 +40,8 @@ var charactersList = [
     {   
         charName: "Iron Man", 
         img: "https://wallpapersflix.com/wp-content/uploads/2020/05/Iron-Man-Wallpaper-For-Mobile-485x1024.jpg",
-        description: "When billionaire industrialist Tony Stark dons his sophisticated steel-mesh armor, he becomes a living high-tech weapon - the world's greatest fighting machine. Tony has primed his ultra modern creation for waging state of the art campaigns, attaining sonic flight, and defending the greater good! He is the Armored Avenger - driven by a heart that is part machine, but all hero! He is the INVINCIBLE IRON MAN!",
+        description: "When billionaire industrialist Tony Stark dons his sophisticated steel-mesh armor, he becomes a living high-tech weapon - the world's greatest fighting machine. He is the Armored Avenger - driven by a heart that is part machine, but all hero! He is the INVINCIBLE IRON MAN!",
+        abilities : ["Armor", "Intellect", "AI"]
     },
     {
         charName:"Captain America",

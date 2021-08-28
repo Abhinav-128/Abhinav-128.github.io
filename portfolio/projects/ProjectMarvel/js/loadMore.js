@@ -1,7 +1,7 @@
 const hiddenClass = "hidden"
 const hiddenCardClass = "hiddenCard"
-const maxCards = 4
-const loadCards = 4
+const maxCards = 3
+const loadCards = 3
 
 const loadBtn = document.querySelector(".loadMore")
 
