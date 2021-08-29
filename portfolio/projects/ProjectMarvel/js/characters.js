@@ -12,7 +12,7 @@ class Character {
         let imgSrc = this.img
         let characterId = this.id
         let charDescription = this.description
-        const card =`<div class="cardContainer" data-name="${title}"  onclick="viewCardInfo(this)">
+        const card =`<div class="cardContainer" data-name="${title}">
                      <div class="card">
                      <img src="${imgSrc}" alt="${title}" class="cardImg">
                      <img src="${imgSrc}" alt="${title}" class="cardBackgroundImg">
@@ -35,8 +35,14 @@ class Character {
     }
 }
 
+const viewCardInfo = (cardEl) => {
+    // hideCardInfo()
+    cardEl = cardEl.querySelector(".cardInfo")
+    cardEl.classList.toggle("hidden")
+}
+
 //Characters List
-var charactersList = [
+const charactersList = [
     {   
         charName: "Iron Man", 
         img: "https://wallpapersflix.com/wp-content/uploads/2020/05/Iron-Man-Wallpaper-For-Mobile-485x1024.jpg",
@@ -86,8 +92,9 @@ const cardsList = document.getElementById("cardsList")
 //Adding all the characters from characters list to cards list
 charactersList.forEach((char)=>{new Character(char.charId,char.charName, char.img, char.description).addCard()})
 
-function viewCardInfo(cardEl){
-    hideCardInfo()
-    cardEl = cardEl.querySelector(".cardInfo")
-    cardEl.classList.remove("hidden")
-}
+const cardContainer = document.getElementsByClassName("cardContainer")
+Array.from(cardContainer).forEach((cardEl)=>{
+    cardEl.addEventListener("click", ()=>{
+        viewCardInfo(cardEl)
+    })
+})
